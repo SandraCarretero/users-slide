@@ -9,25 +9,23 @@ const User = () => {
 	const isDisabledPrevious = currentIndex === 0;
 
 	return (
-		<div>
-			<div key={user.userId}>
-				<img src={user.profileImage} alt={`${user.name}'s profile`} />
-				<h1>Name: {user.name}</h1>
-				<p>Username: {user.username}</p>
-				<p>Email: {user.email}</p>
-				<button
-					disabled={isDisabledPrevious}
-					onClick={() => handlePrevious(currentIndex, setCurrentIndex)}
-				>
-					Previous
-				</button>
-				<button
-					disabled={isDisabledNext}
-					onClick={() => handleNext(currentIndex, setCurrentIndex)}
-				>
-					Next
-				</button>
-			</div>
+		<div key={user.userId}>
+			<img src={user.profileImage} alt={`${user.name}'s profile`} />
+			<h1>Name: {user.name}</h1>
+			<p>Username: {user.username}</p>
+			<p>Email: {user.email}</p>
+			<button
+				disabled={isDisabledPrevious}
+				onClick={() => handlePrevious(currentIndex, setCurrentIndex)}
+			>
+				Previous
+			</button>
+			<button
+				disabled={isDisabledNext}
+				onClick={() => handleNext(currentIndex, setCurrentIndex)}
+			>
+				Next
+			</button>
 		</div>
 	);
 };
